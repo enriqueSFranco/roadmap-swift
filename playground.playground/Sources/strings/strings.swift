@@ -62,4 +62,7 @@ func mainStr() {
     
     let index = greeting.index(greeting.startIndex, offsetBy: 7)
     print(greeting[index]) // a
+    
+    // inserting and removing
+    welcome.insert("!", at: welcome.endIndex)
 }
