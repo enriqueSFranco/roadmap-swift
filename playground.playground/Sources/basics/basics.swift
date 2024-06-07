@@ -1,6 +1,20 @@
 import Foundation
 
-func mainStr() {
+func mainBasics() {
+    // INT
+    let age = 10
+    let year: Int = 2024
+    
+    // FLOAT
+    let piFloat = Float.pi
+    
+    // DOUBLE
+    let piDouble = Double.pi
+    
+    // CHAR
+    let symbol: Character = "<"
+    
+    // STRING
     let quotation = """
     The White Rabbit put on his spectacles.  "Where shall I begin,
     please your Majesty?" he asked.
@@ -119,5 +133,25 @@ func mainStr() {
         }
     }
     print("There are \(act1SceneCount) scenes in Act 1")
-
+    
+    
+    // OPERADORES DE ASIGNACIÓN
+    var result = 0
+    result += 10
+    result -= 9
+    result *= 100
+    result /= 10
+    result %= 10
+    
+    // OPERADORES LÓGICOS
+    let kikeAge = 23
+    let isOlder = kikeAge > 18
+    let isYonger = kikeAge < 18
+    let isEqual = kikeAge == 18
+    let isNotEqual = kikeAge != 18
+    let isOlderOrEqual = kikeAge >= 18
+    let isYoungerOrEqual = kikeAge <= 18
+    
+    // Assignment Operator
+    let (x, y) = (10, 11)
 }
