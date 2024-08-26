@@ -1,3 +1,5 @@
+//: [Previous](@previous)
+
 /*
  * EJERCICIO:
  * Muestra ejemplos de todas las operaciones que puedes realizar con cadenas de caracteres
@@ -165,3 +167,6 @@ func isAnagram(str1: String, str2: String) -> Bool {
     
     return charCountMap.values.allSatisfy { $0 == 0}
 }
+
+
+//: [Next](@next)
