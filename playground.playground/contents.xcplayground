@@ -1,4 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<playground version='5.0' target-platform='ios' display-mode='raw' buildActiveScheme='true' importAppTypes='true'>
-    <timeline fileName='timeline.xctimeline'/>
+<playground version='6.0' target-platform='ios' display-mode='raw' buildActiveScheme='true' importAppTypes='true'>
+    <pages>
+        <page name='classes'/>
+        <page name='types'/>
+        <page name='strings'/>
+        <page name='collection-types'/>
+        <page name='recursion'/>
+        <page name='value-and-reference-types'/>
+    </pages>
 </playground>
