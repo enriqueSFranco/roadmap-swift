@@ -1,5 +1,4 @@
 //: [Previous] (@previous)
-
 var greeting = "Hello, playground"
 
 // NULLABILIDAD
