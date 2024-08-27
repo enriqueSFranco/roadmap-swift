@@ -7,5 +7,6 @@
         <page name='collection-types'/>
         <page name='recursion'/>
         <page name='value-and-reference-types'/>
+        <page name='edd'/>
     </pages>
 </playground>
