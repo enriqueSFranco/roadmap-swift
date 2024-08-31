@@ -4,9 +4,11 @@
         <page name='classes'/>
         <page name='types'/>
         <page name='strings'/>
-        <page name='collection-types'/>
+        <page name='collectionTypes'/>
         <page name='recursion'/>
-        <page name='value-and-reference-types'/>
-        <page name='edd'/>
+        <page name='valueAndReferenceTypes'/>
+        <page name='dataStructures'/>
+        <page name='unitTest'/>
+        <page name='dates'/>
     </pages>
 </playground>

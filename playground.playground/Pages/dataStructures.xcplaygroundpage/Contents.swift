@@ -8,7 +8,7 @@ func maxDepth(_ s: String) -> Int {
     var ans = 0
     
     for char in s {
-        switch cahar {
+        switch char {
         case "(":
             stack.append(char)
             ans = max(ans, stack.count)
