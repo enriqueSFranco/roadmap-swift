@@ -10,5 +10,8 @@
         <page name='dataStructures'/>
         <page name='unitTest'/>
         <page name='dates'/>
+        <page name='regex'/>
+        <page name='designPatterns'/>
+        <page name='concurrency'/>
     </pages>
 </playground>
