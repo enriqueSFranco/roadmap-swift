@@ -12,38 +12,13 @@ let sunday = daysOfWeek.first
 let lastDay = daysOfWeek.last
 let friday = daysOfWeek[5]
 
-// Agragando un nuevo dia a la lista
+// Agregando un nuevo dia a la lista
 daysOfWeek.append("Christmas")
 
 for day in daysOfWeek {
     print("El dia de hoy es \(day)")
 }
 
-
-var count = 10
-while count >= 0 {
-    print("Counter: \(count)")
-    count -= 1
-}
-
-// do while
-repeat {
-    print("Counter: \(count)")
-} while count < 0
-
-
-func countVowels (_ text: String) -> Int {
-    var count = 0
-    let vowels: [Character] = ["a", "e", "i", "o", "u"]
-    let normalizedStr = text.lowercased()
-    
-    for char in text {
-        if vowels.contains(char) {
-            count += 1
-        }
-    }
-    return count
-}
 
 // TUPLAS
 let user = ("kike", 22, true, "kike@gmail.com")
@@ -56,5 +31,29 @@ struct UserInfo {
     var address: String
 }
 var userInfo = UserInfo(name: "kike", age: 22, genre: "M", address: "Calle One")
+
+
+// ENUMS
+enum Command: String {
+    case up = "w", down = "s", left = "a", right = "d", exit = "e"
+}
+
+func runCommand() {
+    print("Introduce un comando: ", terminator: "")
+    if let choice = readLine() {
+        print("Entrada recibida: \(choice)") // Para verificar la entrada
+        let posibleCommand = Command(rawValue: choice.lowercased())
+        if let command = posibleCommand {
+            print("Comando recibido: \(command)")
+        } else {
+            print("Comando no válido.")
+        }
+    } else {
+        print("No se recibió ninguna entrada.")
+    }
+}
+
+// Llama a la función para probarla
+runCommand()
 
 //: [Next](@next)
