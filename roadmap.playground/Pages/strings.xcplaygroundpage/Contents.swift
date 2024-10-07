@@ -71,14 +71,14 @@ variableString += " and carriage"
 // variableString is now "Horse and carriage"
 
 
-let constantString = "Highlander"
+var constantString = "Highlander"
 constantString += " and another Highlander"
 // this reports a compile-time error - a constant string cannot be modified
 
 // MARK: Concatenación de strings
 let string1 = "hello"
 let string2 = " there"
-var welcome = string1 + string2
+var welcome: String = string1 + string2
 // welcome now equals "hello there"
 
 var instruction = "look over"
@@ -115,18 +115,21 @@ for index in greeting.indices {
 }
 
 // MARK: Caracteres
-let exclamationMark: Character = "!"
+let letter: Character = "a"
 let catCharacters: [Character] = ["C", "a", "t", "!", "🐱"]
 let catString = String(catCharacters) // Prints "Cat!🐱"
 
 
 // MARK: Ejercicio
 func isPalindrome(str: String) -> Bool {
+    let characters = Array(str)
     var l = 0
     var r = str.count - 1
     
     while (l <= r) {
-        if (str[l] != str[r]) return false
+        if characters[l] != characters[r] {
+            return false
+        }
         l += 1
         r -= 1
     }
@@ -137,8 +140,8 @@ func isIsogram(str: String) -> Bool {
     var seenCharacters: Set<Character> = Set()
     
     for letter in str {
-        if letter != ' ' {
-            if letter in seenCharacters {
+        if letter != " " {
+            if seenCharacters.contains(letter) {
                 return false
             }
             seenCharacters.insert(letter)
@@ -158,11 +161,11 @@ func isAnagram(str1: String, str2: String) -> Bool {
     
     var charCountMap = [Character:Int]()
     for letter in str1 {
-        charCountMap[char, default: 0] += 1
+        charCountMap[letter, default: 0] += 1
     }
     
     for letter in str2 {
-        charCountMap[char, default: 0] -= 1
+        charCountMap[letter, default: 0] -= 1
     }
     
     return charCountMap.values.allSatisfy { $0 == 0}

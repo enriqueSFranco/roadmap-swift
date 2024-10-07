@@ -4,7 +4,6 @@
         <page name='classes'/>
         <page name='types'/>
         <page name='strings'/>
-        <page name='collectionTypes'/>
         <page name='recursion'/>
         <page name='valueAndReferenceTypes'/>
         <page name='dataStructures'/>

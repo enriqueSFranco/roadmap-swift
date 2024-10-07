@@ -18,6 +18,9 @@
  * Llamada a Super: Si la clase hereda de otra clase, debe llamar al inicializador designado de la superclase.
  * Conveniencia: Los inicializadores designados pueden llamar a otros inicializadores designados de la misma clase para evitar duplicar código.
  **/
+
+import Foundation
+
 class Vehiculo {
     var marca: String
     var modelo: String
@@ -225,5 +228,18 @@ class User {
     
     var description: String {
         return "User(username: \(username), email: \(email))"
+    }
+}
+
+struct Password {
+    var value: String
+    
+    init?(password: String) {
+        let specialCharacterSet = CharacterSet(charactersIn: "!$%^#&*()")
+        let containsSpecialCharacter = password.rangeOfCharacter(from: specialCharacterSet)
+        if password.count < 8 || containsSpecialCharacter == nil {
+            return nil
+        }
+        self.value = password
     }
 }

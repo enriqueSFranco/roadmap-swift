@@ -5,6 +5,7 @@
 //  Created by Enrique SFranco on 25/09/24.
 //
 
+import Foundation
 
 /*
  * EJERCICIO:
@@ -77,7 +78,7 @@ func isValidMove(row: Int, col: Int) -> Bool {
             grid[row][col] != .obstacle
 }
 
-func moveMickey(command: Command) -> Bool {
+func moveMickey(command: Command) {
     let (row, col) = mickeyPosition
     var newRow = row
     var newCol = col
@@ -104,25 +105,23 @@ func moveMickey(command: Command) -> Bool {
         if grid[newRow][newCol] == .exit {
             printGrid()
             print("Has ganado!")
-            return true
+            exit(0)
         }
         grid[newRow][newCol] = .mickey
-        return false
     } else {
         print("Movimiento fuera de los límites del laberinto.")
     }
-    return false
 }
 
-func runGame() {
+public func runGame() {
     initializeMickeyPosition()
 
     while true {
         print("¿Hacia dónde te quieres mover? (W: Arriba, D: Derecha, S: Abajo, A: Izquierda, X: Salir)")
         if let input = readLine(), let command = Command(rawValue: input.lowercased()) {
             printGrid()
+            moveMickey(command: command)
         }
         
     }
 }
-runGame()
