@@ -39,8 +39,26 @@ enum Cell: String {
     case exit = "🚪"
 }
 
-enum Command: String {
-    case UP = "W", RIGHT = "D", DOWN = "S", LEFT = "A", EXIT = "X"
+enum Command {
+    case UP, RIGHT, DOWN, LEFT, EXIT
+    
+    init?(command: String) {
+        switch command.lowercased() {
+            case "w":
+                self = .UP
+            case "r":
+                self = .RIGHT
+            case "s":
+                self = .DOWN
+            case "a":
+                self = .LEFT
+            case "x":
+                self = .EXIT
+            default:
+                return nil
+        }
+        
+    }
 }
 
 var grid: [[Cell]] = [
@@ -118,10 +136,11 @@ public func runGame() {
 
     while true {
         print("¿Hacia dónde te quieres mover? (W: Arriba, D: Derecha, S: Abajo, A: Izquierda, X: Salir)")
-        if let input = readLine(), let command = Command(rawValue: input.lowercased()) {
+        if let input = readLine(), let command = Command(command: input) {
             printGrid()
             moveMickey(command: command)
+        } else {
+            print("Entrada no válida. Por favor, intenta de nuevo.")
         }
-        
     }
 }

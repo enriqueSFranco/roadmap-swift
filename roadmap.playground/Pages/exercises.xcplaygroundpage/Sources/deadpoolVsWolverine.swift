@@ -138,8 +138,3 @@ class Battle {
         }
     }
 }
-
-let deadpool = Superhero(name: "Deadpool")
-let wolverine = Superhero(name: "Wolverine", maxDamage: 120, chanceToEvade: 0.20)
-
-let battle = Battle(superheroOne: deadpool, superheroTwo: wolverine)
