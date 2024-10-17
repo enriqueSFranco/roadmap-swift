@@ -1,4 +1,9 @@
-//: [Previous](@previous)
+//
+//  deadpoolVsWolverine.swift
+//  
+//
+//  Created by Enrique SFranco on 07/10/24.
+//
 
 import Foundation
 
@@ -133,11 +138,3 @@ class Battle {
         }
     }
 }
-
-let deadpool = Superhero(name: "Deadpool")
-let wolverine = Superhero(name: "Wolverine", maxDamage: 120, chanceToEvade: 0.20)
-
-let battle = Battle(superheroOne: deadpool, superheroTwo: wolverine)
-battle.simulate()
-
-//: [Next](@next)

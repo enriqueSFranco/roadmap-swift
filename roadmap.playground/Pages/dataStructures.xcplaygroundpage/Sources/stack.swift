@@ -1,8 +1,10 @@
-//: [Previous](@previous)
+//
+//  stack.swift
+//  
+//
+//  Created by Enrique SFranco on 08/10/24.
+//
 
-import Foundation
-
-// MARK: STACK
 func maxDepth(_ s: String) -> Int {
     var stack = [Character]()
     var ans = 0
@@ -24,5 +26,3 @@ func maxDepth(_ s: String) -> Int {
     
     return !stack.isEmpty ? ans : -1
 }
-
-//: [Next](@next)
