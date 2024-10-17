@@ -13,5 +13,7 @@
         <page name='regex'/>
         <page name='designPatterns'/>
         <page name='concurrency'/>
+        <page name='exercises'/>
+        <page name='logging'/>
     </pages>
 </playground>
